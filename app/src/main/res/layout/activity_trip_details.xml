@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/card_rounded_background"
+    android:layout_marginBottom="12dp">
+
+    <!-- Destination -->
+    <TextView
+        android:id="@+id/tvDestination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Destination"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#333333"/>
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textSize="16sp"
+        android:textColor="#555555"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Image -->
+    <ImageView
+        android:id="@+id/ivTripMountain"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="12dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mountain_image"
+        android:contentDescription="Mountain view"/>
+
+    <!-- Coordinates -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:id="@+id/tvLatitude"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Latitude: 0.0"
+            android:textColor="#666666"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tvLongitude"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Longitude: 0.0"
+            android:textColor="#666666"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:gravity="start">
+
+        <Button
+            android:id="@+id/btnEditTrip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button_edit"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="Edit"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#F81111"
+            android:textColorLink="#FF0000" />
+
+        <Button
+            android:id="@+id/btnDeleteTrip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_edit"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"/>
+    </LinearLayout>
+</LinearLayout>

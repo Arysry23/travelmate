@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#f5f9ff">
+
+    <!-- Welcome Title -->
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to TravelMate!"
+        android:textSize="24sp"
+        android:textColor="#333333"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="24dp"/>
+
+
+    <Button
+        android:id="@+id/btnAddTrip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Trip"
+        android:background="@drawable/button_primary"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="🔍 Search trips..."
+        android:inputType="text"
+        android:padding="12dp"
+        android:background="@drawable/edittext_rounded"
+        android:textColor="#000000"
+        android:textColorHint="#777777"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Sort by Date Switch -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        android:background="@drawable/card_rounded"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Sort by Date"
+            android:textSize="16sp"
+            android:textColor="#333333"/>
+
+        <Switch
+            android:id="@+id/switchSortByDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="UseSwitchCompatOrMaterialXml"/>
+    </LinearLayout>
+
+    <!-- RecyclerView for Trips -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTrips"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/card_rounded"
+        android:padding="4dp"/>
+</LinearLayout>
